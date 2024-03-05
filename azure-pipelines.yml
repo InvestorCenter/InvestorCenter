@@ -5,6 +5,6 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
-- task: gitmirror@0//You can install this task in marketplace
+- task: gitmirror@0
   inputs:
-    GitRepoUrl: 'https://4gauip7c4de2fjjbuq5oll4ap5r6fkzsw3vulmpsdsoyoob7ugca@dev.azure.com/cecchinn/InvestorCenter/_git/InvestorCenter.nicholas.cecchin'//This is the URL of Azure Repo, you need to add a personal access token in the URL
+    GitRepoUrl: 'https://4gauip7c4de2fjjbuq5oll4ap5r6fkzsw3vulmpsdsoyoob7ugca@dev.azure.com/cecchinn/InvestorCenter/_git/InvestorCenter.nicholas.cecchin'
