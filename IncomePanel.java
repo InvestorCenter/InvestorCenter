@@ -8,9 +8,10 @@ public class IncomePanel extends JPanel {
     public IncomePanel() {
         incomeTextField = new JTextField(10);
         add(incomeTextField);
+        incomeTextField.setBorder(BorderFactory.createLineBorder(Color.black));
         JPanel textPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         textPanel.add(incomeTextField);
-        JLabel incomeLabel = new JLabel("Enter you yearly income as an integer:");
+        JLabel incomeLabel = new JLabel("Enter your yearly income as an integer:");
         next = new JButton("Next");
 
         setLayout(new GridBagLayout());

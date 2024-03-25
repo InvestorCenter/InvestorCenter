@@ -1,4 +1,4 @@
 clear 
 rm *.class
-javac Main.java SignUp.java
+javac Main.java SignIn.java
 java Main

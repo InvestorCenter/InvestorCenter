@@ -1,12 +1,17 @@
 import java.awt.*;
 import java.awt.event.*;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 import javax.swing.*;
 
 public class SignUp extends JFrame implements ActionListener {
-    private JLabel titleLabel, usernameLabel, passwordLabel, titlePromptLabel;
+    private JLabel titleLabel, usernameLabel, passwordLabel, logoLabel;
     private JTextField usernameField;
     private JPasswordField passwordField;
     private JButton signUpButton;
+    private static Auth authorization = new Auth();
 
     public void signUpMethod() {
         setTitle("Investor Center");
@@ -21,9 +26,52 @@ public class SignUp extends JFrame implements ActionListener {
         titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
         titleLabel.setBounds(250, 10, 100, 30);
 
-        titlePromptLabel = new JLabel("Click 'enter' to enter input");
-        titlePromptLabel.setFont(new Font("Arial", Font.PLAIN ,10));
-        titlePromptLabel.setBounds(235, 30, 125, 50);
+        Color bgColor = Color.decode("#fffbf4"); // Replace #FF0000 with your hex color code
+        getContentPane().setBackground(bgColor);
+
+        //display logo
+        try {
+            File imageFile = new File("logo.png");
+            Image image = ImageIO.read(imageFile);
+            
+            // Calculate the scaled width and height to fit within a specific size
+            int maxWidth = 225; // Maximum width
+            int maxHeight = 225; // Maximum height
+            
+            int originalWidth = image.getWidth(null);
+            int originalHeight = image.getHeight(null);
+            
+            // Calculate the scaled dimensions
+            int scaledWidth = originalWidth;
+            int scaledHeight = originalHeight;
+            
+            // Check if scaling is needed
+            if (originalWidth > maxWidth || originalHeight > maxHeight) {
+                double widthRatio = (double) maxWidth / originalWidth;
+                double heightRatio = (double) maxHeight / originalHeight;
+                double minRatio = Math.min(widthRatio, heightRatio);
+                
+                scaledWidth = (int) (originalWidth * minRatio);
+                scaledHeight = (int) (originalHeight * minRatio);
+            }
+            
+            // Resize the image
+            Image scaledImage = image.getScaledInstance(scaledWidth, scaledHeight, Image.SCALE_SMOOTH);
+            
+            // Create a ImageIcon from the scaled image
+            ImageIcon scaledIcon = new ImageIcon(scaledImage);
+            
+            // Create a JLabel for the scaled image
+            logoLabel = new JLabel(scaledIcon);
+            logoLabel.setBounds(375, 225, scaledWidth, scaledHeight); // Adjust position as needed
+            add(logoLabel);
+
+            
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        
 
 
         //username and password indicators
@@ -41,14 +89,6 @@ public class SignUp extends JFrame implements ActionListener {
         usernameField = new JTextField();
         usernameField.setBounds(200,90, 200, 30);
         usernameField.setBorder(BorderFactory.createLineBorder(Color.black));
-        usernameField.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                String username = usernameField.getText();
-                
-                System.out.println(username);
-            }
-        });
-
 
 
 
@@ -56,13 +96,6 @@ public class SignUp extends JFrame implements ActionListener {
         passwordField = new JPasswordField();
         passwordField.setBounds(200, 130, 200, 30);
         passwordField.setBorder(BorderFactory.createLineBorder(Color.black));
-        passwordField.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                char[] password = passwordField.getPassword();
-                
-                System.out.println(password);
-            }
-        });
 
 
 
@@ -73,7 +106,7 @@ public class SignUp extends JFrame implements ActionListener {
         signUpButton.addActionListener(this);
 
         add(titleLabel);
-        add(titlePromptLabel);
+
         add(usernameLabel);
         add(passwordLabel);
         add(usernameField);
@@ -87,5 +120,11 @@ public class SignUp extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
         //add what happens when clicked "sign up"
+        authorization.Signup(usernameField.getText(), passwordField.getText());
+        SignIn signIn = new SignIn();
+        signIn.setVisible(true);
+        setVisible(false);
+        
+
     }
 }
