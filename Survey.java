@@ -22,6 +22,7 @@ public class Survey extends JFrame implements ActionListener {
     Container c;
     JPanel portfolioCard;
 
+<<<<<<< HEAD
     Profile profile;
 
     public Survey() {
@@ -31,6 +32,22 @@ public class Survey extends JFrame implements ActionListener {
         setSize(new Dimension(500, 400));
         setLocationRelativeTo(null);
 
+
+        // Function to set visibility of JFrame.
+        setVisible(true);
+
+        // Function to set default operation of JFrame.
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+=======
+    public Survey()
+    {
+>>>>>>> 094d501 (i forget when)
+
+        // Function to set size of JFrame.
+        setTitle("Survey");
+        setSize(new Dimension(400, 400));
+        setLocationRelativeTo(null);
+        
 
         // Function to set visibility of JFrame.
         setVisible(true);
@@ -47,11 +64,17 @@ public class Survey extends JFrame implements ActionListener {
         // set the layout
         c.setLayout(card);
 
+<<<<<<< HEAD
         intro = new Intro();
         intro.next.addActionListener(this);
 
         incomePanel = new IncomePanel();
         incomePanel.setPreferredSize(new Dimension(400, 400));
+=======
+        
+        incomePanel = new IncomePanel();
+        incomePanel.setPreferredSize(new Dimension(400,400));
+>>>>>>> 094d501 (i forget when)
         incomePanel.requestFocus();
         incomePanel.incomeTextField.setEditable(true);
         incomePanel.next.addActionListener(this);
@@ -67,9 +90,14 @@ public class Survey extends JFrame implements ActionListener {
         contributionAmount.contributionAmount.setEditable(true);
         contributionAmount.next.addActionListener(this);
 
+<<<<<<< HEAD
         timePeriod = new TimePeriod();
         timePeriod.next.addActionListener(this);
         profile = new Profile();
+=======
+       
+
+>>>>>>> 094d501 (i forget when)
 
 
         c.add(intro, "welcome");
@@ -325,6 +353,7 @@ public class Survey extends JFrame implements ActionListener {
 
     }
 
+<<<<<<< HEAD
     public static int DeterminePortfolio(Profile profile) {
 
         // Low risk
@@ -430,3 +459,7 @@ public class Survey extends JFrame implements ActionListener {
 }
 
 
+=======
+
+}
+>>>>>>> 094d501 (i forget when)

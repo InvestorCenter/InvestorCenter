@@ -7,7 +7,11 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 
 public class SignUp extends JFrame implements ActionListener {
+<<<<<<< HEAD
     private JLabel titleLabel, usernameLabel, passwordLabel, logoLabel;
+=======
+    private JLabel titleLabel, usernameLabel, passwordLabel;
+>>>>>>> 094d501 (i forget when)
     private JTextField usernameField;
     private JPasswordField passwordField;
     private JButton signUpButton;
@@ -26,6 +30,7 @@ public class SignUp extends JFrame implements ActionListener {
         titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
         titleLabel.setBounds(250, 10, 100, 30);
 
+<<<<<<< HEAD
         Color bgColor = Color.decode("#fffbf4"); // Replace #FF0000 with your hex color code
         getContentPane().setBackground(bgColor);
 
@@ -71,6 +76,8 @@ public class SignUp extends JFrame implements ActionListener {
             e.printStackTrace();
         }
 
+=======
+>>>>>>> 094d501 (i forget when)
         
 
 
