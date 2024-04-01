@@ -95,6 +95,8 @@ public class Survey extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e)
     {
         if (e.getSource() == intro.next){
+            profile.setUsername(User.getName());
+            System.out.println(User.getName());
             card.show(c, "income");
         } else if (e.getSource() == incomePanel.next) {
             profile.setIncome(Integer.valueOf(incomePanel.incomeTextField.getText()));
@@ -127,14 +129,25 @@ public class Survey extends JFrame implements ActionListener {
             profile.setMonthlyAmount(Integer.valueOf(contributionAmount.contributionAmount.getText()));
             card.show(c, "timePeriod");
         }
-       
 
-            
-
-        
         // call the next card
+        else if(e.getSource() == timePeriod.next){
+            if(timePeriod.OnetoTwoYear.isSelected()){
+                profile.setTimePeriod(1);
+            }
+            if(timePeriod.TwotoFiveYear.isSelected()){
+                profile.setTimePeriod(2);
+            }
+            if(timePeriod.FivetoTen.isSelected()){
+                profile.setTimePeriod(3);
+            }
+            profile.uploadProfile();
+
+        }
 
     }
+
+
 
 
 }
