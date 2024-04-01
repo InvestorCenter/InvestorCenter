@@ -1,4 +1,8 @@
+
+
+
 public class Profile {
+    private String username;
     private int income;
     private int risk;
     private boolean contributeMonthly;
@@ -6,6 +10,15 @@ public class Profile {
     private int monthlyAmount;
 
     // Getter and setter for income
+
+    public String getUsername() {
+        return username;
+    }
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+
     public int getIncome() {
         return income;
     }
@@ -47,5 +60,9 @@ public class Profile {
 
     public void setMonthlyAmount(int monthlyAmount){
         this.monthlyAmount = monthlyAmount;
+    }
+
+    public void uploadProfile(){
+        Auth.uploadProfile(this.username,this.income, this.risk, this.contributeMonthly, this.timePeriod, this.monthlyAmount);
     }
 }
