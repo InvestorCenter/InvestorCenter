@@ -15,6 +15,26 @@ public class Auth {
         String strUrl = BASE_ENDPOINT + "signup/" + username + "/" + password;
         return GetFromApi(strUrl);
     }
+// '/saveProfile/<username>/<income>/<risk>/<monthlyConBool>/<monthlyConAmount>/<timePeriod>'
+public static boolean uploadProfile(String username, int income, int risk, boolean contributeMonthly, int timePeriod, int monthlyAmount) {
+    String strUrl;
+    try {
+        // Convert the parameters to strings and URL encode them
+        String encodedUsername = URLEncoder.encode(username, "UTF-8");
+        String encodedIncome = URLEncoder.encode(String.valueOf(income), "UTF-8");
+        String encodedRisk = URLEncoder.encode(String.valueOf(risk), "UTF-8");
+        String encodedContributeMonthly = URLEncoder.encode(String.valueOf(contributeMonthly), "UTF-8");
+        String encodedMonthlyAmount = URLEncoder.encode(String.valueOf(monthlyAmount), "UTF-8");
+        String encodedTimePeriod = URLEncoder.encode(String.valueOf(timePeriod), "UTF-8");
+
+        // Prepare the URL
+        strUrl = BASE_ENDPOINT + "saveProfile/" + encodedUsername + "/" + encodedIncome + "/" + encodedRisk + "/" + encodedContributeMonthly + "/" + encodedMonthlyAmount + "/" + encodedTimePeriod;
+    } catch (UnsupportedEncodingException e) {
+        e.printStackTrace();
+        return false;
+    }
+    return GetFromApi(strUrl);
+}
 
     private static boolean GetFromApi(String strUrl) {
         HttpURLConnection connection = null;
