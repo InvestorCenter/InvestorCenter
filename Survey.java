@@ -327,9 +327,7 @@ public class Survey extends JFrame implements ActionListener {
 
         }
 
-// TODO: create seperate method. Pass in profile and return a number for a switch statement. Display card bases on that
     }
-    // (RISK)(TIME)(CONTRIBUTE)
 
     public static int DeterminePortfolio(Profile profile) {
 
