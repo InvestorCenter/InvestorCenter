@@ -144,66 +144,28 @@ public class Survey extends JFrame implements ActionListener {
             profile.uploadProfile();
             int portfolio = DeterminePortfolio(profile);
             switch (portfolio) {
-                case 111:
-                    card.show(c, "portfolio111");
-                    break;
-                case 110:
-                    card.show(c, "portfolio110");
-                    break;
-                case 121:
-                    card.show(c, "portfolio121");
-                    break;
-                case 120:
-                    card.show(c, "portfolio120");
-                    break;
-                case 131:
-                    card.show(c, "portfolio131");
-                    break;
-                case 130:
-                    card.show(c, "portfolio130");
-                    break;
-                case 211:
-                    card.show(c, "portfolio211");
-                    break;
-                case 210:
-                    card.show(c, "portfolio210");
-                    break;
-                case 221:
-                    card.show(c, "portfolio221");
-                    break;
-                case 220:
-                    card.show(c, "portfolio220");
-                    break;
-                case 231:
-                    card.show(c, "portfolio231");
-                    break;
-                case 230:
-                    card.show(c, "portfolio230");
-                    break;
-                case 311:
-                    card.show(c, "portfolio311");
-                    break;
-                case 310:
-                    card.show(c, "portfolio310");
-                    break;
-                case 321:
-                    card.show(c, "portfolio321");
-                    break;
-                case 320:
-                    card.show(c, "portfolio320");
-                    break;
-                case 331:
-                    card.show(c, "portfolio331");
-                    break;
-                case 330:
-                    card.show(c, "portfolio330");
-                    break;
-                default:
-                    card.show(c, "defaultPortfolio");
-                    break;
+                case 111 -> Portfolios.createPortfolio111Panel();
+                case 110 -> Portfolios.createPortfolio110Panel();
+                case 121 -> Portfolios.createPortfolio121Panel();
+                case 120 -> Portfolios.createPortfolio120Panel();
+                case 131 -> Portfolios.createPortfolio131Panel();
+                case 130 -> Portfolios.createPortfolio130Panel();
+                case 211 -> Portfolios.createPortfolio211Panel();
+                case 210 -> Portfolios.createPortfolio210Panel();
+                case 221 -> Portfolios.createPortfolio221Panel();
+                case 220 -> Portfolios.createPortfolio220Panel();
+                case 231 -> Portfolios.createPortfolio231Panel();
+                case 230 -> Portfolios.createPortfolio230Panel();
+                case 311 -> Portfolios.createPortfolio311Panel();
+                case 310 -> Portfolios.createPortfolio310Panel();
+                case 321 -> Portfolios.createPortfolio321Panel();
+                case 320 -> Portfolios.createPortfolio320Panel();
+                case 331 -> Portfolios.createPortfolio331Panel();
+                case 330 -> Portfolios.createPortfolio330Panel();
+                default -> Portfolios.createDefaultPortfolioPanel();
             }
 
-        }
+            }
 
 // TODO: create seperate method. Pass in profile and return a number for a switch statement. Display card bases on that
     }
