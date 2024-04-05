@@ -1,0 +1,1 @@
+Interactive platform designed for creating user accounts and conducting surveys. By participating in our surveys, users unlock the opportunity to receive personalized stock options tailored to their responses.
