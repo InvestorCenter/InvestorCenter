@@ -65,4 +65,24 @@ public class Profile {
     public void uploadProfile(){
         Auth.uploadProfile(this.username,this.income, this.risk, this.contributeMonthly, this.timePeriod, this.monthlyAmount);
     }
+    public boolean checkProfile(){
+        return Auth.CheckIfProfileExists(this.username);
+    }
+
+    public int getRiskFromDB(){
+        return Auth.getUserRisk(this.username);
+    }
+    public boolean getContributeMonthFromDB(){
+        int num = Auth.getUserContributeMonthly(this.username);
+        if(num == 0){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+
+    public int getTimePeriodFromDB(){
+        return Auth.getUserTimePeriod(this.username);
+    }
 }
