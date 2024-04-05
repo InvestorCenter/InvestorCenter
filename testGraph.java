@@ -1,9 +1,9 @@
 import javax.swing.*;
 
-public class Main{
+public class testGraph{
     private static final int WIDTH = 500;
     private static final int HEIGHT = 500;
-    public static void main(String[] args) {
+    public testGraph(){
         SwingUtilities.invokeLater(() -> {
             JFrame frame = new JFrame("Curved Graph Example");
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
