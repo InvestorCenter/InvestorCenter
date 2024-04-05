@@ -1,7 +1,8 @@
 // Java program to illustrate the CardLayout Class
+
 import java.awt.*;
 import java.awt.event.*;
-import javax.swing.JFrame;
+import javax.swing.*;
 
 
 public class Survey extends JFrame implements ActionListener {
@@ -19,19 +20,17 @@ public class Survey extends JFrame implements ActionListener {
     // Declaration of objects
     // of Container class.
     Container c;
-    
+    JPanel portfolioCard;
+
     Profile profile;
 
-    public Survey()
-    {
+    public Survey() {
 
         // Function to set size of JFrame.
         setTitle("Survey");
         setSize(new Dimension(500, 400));
         setLocationRelativeTo(null);
 
-        
-        
 
         // Function to set visibility of JFrame.
         setVisible(true);
@@ -50,14 +49,12 @@ public class Survey extends JFrame implements ActionListener {
 
         intro = new Intro();
         intro.next.addActionListener(this);
-        
+
         incomePanel = new IncomePanel();
-        incomePanel.setPreferredSize(new Dimension(400,400));
+        incomePanel.setPreferredSize(new Dimension(400, 400));
         incomePanel.requestFocus();
         incomePanel.incomeTextField.setEditable(true);
         incomePanel.next.addActionListener(this);
-
-   
 
 
         riskPanel = new RiskPanel();
@@ -70,10 +67,10 @@ public class Survey extends JFrame implements ActionListener {
         contributionAmount.contributionAmount.setEditable(true);
         contributionAmount.next.addActionListener(this);
 
-       timePeriod = new TimePeriod();
-       timePeriod.next.addActionListener(this);
+        timePeriod = new TimePeriod();
+        timePeriod.next.addActionListener(this);
         profile = new Profile();
-       
+
 
         c.add(intro, "welcome");
 
@@ -88,197 +85,354 @@ public class Survey extends JFrame implements ActionListener {
         c.add(contributionAmount, "amount");
 
         c.add(timePeriod, "timePeriod");
-        
+
 
     }
-    // TODO: make sure you have to select an option for radio buttons
-    public void actionPerformed(ActionEvent e)
-    {
-        if (e.getSource() == intro.next){
+
+
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == intro.next) {
             profile.setUsername(User.getName());
             System.out.println(User.getName());
-            card.show(c, "income");
+
+            if(profile.checkProfile()){
+                // TODO: GET INFO FROM DATABASE OF THE PROFILE GIVEN THE USERNAME
+                profile.setRisk(profile.getRiskFromDB());
+                profile.setContributeMonthly(profile.getContributeMonthFromDB());
+                profile.setTimePeriod(profile.getTimePeriodFromDB());
+                int portfolio = DeterminePortfolio(profile);
+                System.out.println(portfolio);
+                switch (portfolio) {
+                    case 111:
+                        portfolioCard = Portfolios.createPortfolio111Panel();
+                        c.add(portfolioCard, "portfolio");
+                        card.show(c, "portfolio");
+                        break;
+
+                    case 110:
+                        portfolioCard = Portfolios.createPortfolio110Panel();
+                        c.add(portfolioCard, "portfolio");
+                        card.show(c, "portfolio");
+                        break;
+                    case 121:
+                        portfolioCard = Portfolios.createPortfolio121Panel();
+                        c.add(portfolioCard, "portfolio");
+                        card.show(c, "portfolio");
+                        break;
+                    case 120:
+                        portfolioCard = Portfolios.createPortfolio120Panel();
+                        c.add(portfolioCard, "portfolio");
+                        card.show(c, "portfolio");
+                        break;
+                    case 131:
+                        portfolioCard = Portfolios.createPortfolio131Panel();
+                        c.add(portfolioCard, "portfolio");
+                        card.show(c, "portfolio");
+                        break;
+                    case 130:
+                        portfolioCard = Portfolios.createPortfolio130Panel();
+                        c.add(portfolioCard, "portfolio");
+                        card.show(c, "portfolio");
+                        break;
+                    case 211:
+                        portfolioCard = Portfolios.createPortfolio211Panel();
+                        c.add(portfolioCard, "portfolio");
+                        card.show(c, "portfolio");
+                        break;
+                    case 210:
+                        portfolioCard = Portfolios.createPortfolio210Panel();
+                        c.add(portfolioCard, "portfolio");
+                        card.show(c, "portfolio");
+                        break;
+                    case 221:
+                        portfolioCard = Portfolios.createPortfolio221Panel();
+                        c.add(portfolioCard, "portfolio");
+                        card.show(c, "portfolio");
+                        break;
+                    case 220:
+                        portfolioCard = Portfolios.createPortfolio220Panel();
+                        c.add(portfolioCard, "portfolio");
+                        card.show(c, "portfolio");
+                        break;
+                    case 231:
+                        portfolioCard = Portfolios.createPortfolio231Panel();
+                        c.add(portfolioCard, "portfolio");
+                        card.show(c, "portfolio");
+                        break;
+                    case 230:
+                        portfolioCard = Portfolios.createPortfolio230Panel();
+                        c.add(portfolioCard, "portfolio");
+                        card.show(c, "portfolio");
+                        break;
+                    case 311:
+                        portfolioCard = Portfolios.createPortfolio311Panel();
+                        c.add(portfolioCard, "portfolio");
+                        card.show(c, "portfolio");
+                        break;
+                    case 310:
+                        portfolioCard = Portfolios.createPortfolio310Panel();
+                        c.add(portfolioCard, "portfolio");
+                        card.show(c, "portfolio");
+                        break;
+                    case 321:
+                        portfolioCard = Portfolios.createPortfolio321Panel();
+                        c.add(portfolioCard, "portfolio");
+                        card.show(c, "portfolio");
+                        break;
+                    case 320:
+                        portfolioCard = Portfolios.createPortfolio320Panel();
+                        c.add(portfolioCard, "portfolio");
+                        card.show(c, "portfolio");
+                        break;
+                    case 331:
+                        portfolioCard = Portfolios.createPortfolio331Panel();
+                        c.add(portfolioCard, "portfolio");
+                        card.show(c, "portfolio");
+                        break;
+                    case 330:
+                        portfolioCard = Portfolios.createPortfolio330Panel();
+                        c.add(portfolioCard, "portfolio");
+                        card.show(c, "portfolio");
+                        break;
+                    default:
+                        Portfolios.createDefaultPortfolioPanel();
+                        break;
+
+                }
+
+            }
+            else {
+                card.show(c, "income");
+            }
+
         } else if (e.getSource() == incomePanel.next) {
             profile.setIncome(Integer.valueOf(incomePanel.incomeTextField.getText()));
             System.out.println(profile.getIncome());
             card.show(c, "risk");
 
         } else if (e.getSource() == riskPanel.nextButton) {
-            if(riskPanel.lowRiskLevel.isSelected()){
+            if (riskPanel.lowRiskLevel.isSelected()) {
                 profile.setRisk(1);
-            }
-            else if(riskPanel.mediumRiskLevel.isSelected()){
+            } else if (riskPanel.mediumRiskLevel.isSelected()) {
                 profile.setRisk(2);
-            }
-            else if(riskPanel.highRiskLevel.isSelected()){
+            } else if (riskPanel.highRiskLevel.isSelected()) {
                 profile.setRisk(3);
             }
             card.show(c, "contributions");
         } else if (e.getSource() == yesNoContributions.next) {
-            if(yesNoContributions.yesButton.isSelected()){
+            if (yesNoContributions.yesButton.isSelected()) {
                 profile.setContributeMonthly(true);
                 System.out.println(profile.getMonthlyAmount());
-            card.show(c, "amount");
-            }
-            else if(yesNoContributions.noButton.isSelected()){
+                card.show(c, "amount");
+            } else if (yesNoContributions.noButton.isSelected()) {
                 profile.setContributeMonthly(false);
                 card.show(c, "timePeriod");
             }
-        }
-        else if(e.getSource() == contributionAmount.next){
+        } else if (e.getSource() == contributionAmount.next) {
             profile.setMonthlyAmount(Integer.valueOf(contributionAmount.contributionAmount.getText()));
             card.show(c, "timePeriod");
         }
 
         // call the next card
-        else if(e.getSource() == timePeriod.next){
-            if(timePeriod.OnetoTwoYear.isSelected()){
+        else if (e.getSource() == timePeriod.next) {
+            if (timePeriod.OnetoTwoYear.isSelected()) {
                 profile.setTimePeriod(1);
             }
-            if(timePeriod.TwotoFiveYear.isSelected()){
+            if (timePeriod.TwotoFiveYear.isSelected()) {
                 profile.setTimePeriod(2);
             }
-            if(timePeriod.FivetoTen.isSelected()){
+            if (timePeriod.FivetoTen.isSelected()) {
                 profile.setTimePeriod(3);
             }
             profile.uploadProfile();
             int portfolio = DeterminePortfolio(profile);
             switch (portfolio) {
-                case 111 -> Portfolios.createPortfolio111Panel();
-                case 110 -> Portfolios.createPortfolio110Panel();
-                case 121 -> Portfolios.createPortfolio121Panel();
-                case 120 -> Portfolios.createPortfolio120Panel();
-                case 131 -> Portfolios.createPortfolio131Panel();
-                case 130 -> Portfolios.createPortfolio130Panel();
-                case 211 -> Portfolios.createPortfolio211Panel();
-                case 210 -> Portfolios.createPortfolio210Panel();
-                case 221 -> Portfolios.createPortfolio221Panel();
-                case 220 -> Portfolios.createPortfolio220Panel();
-                case 231 -> Portfolios.createPortfolio231Panel();
-                case 230 -> Portfolios.createPortfolio230Panel();
-                case 311 -> Portfolios.createPortfolio311Panel();
-                case 310 -> Portfolios.createPortfolio310Panel();
-                case 321 -> Portfolios.createPortfolio321Panel();
-                case 320 -> Portfolios.createPortfolio320Panel();
-                case 331 -> Portfolios.createPortfolio331Panel();
-                case 330 -> Portfolios.createPortfolio330Panel();
-                default -> Portfolios.createDefaultPortfolioPanel();
-            }
+                case 111:
+                    portfolioCard = Portfolios.createPortfolio111Panel();
+                    c.add(portfolioCard, "portfolio");
+                    card.show(c, "portfolio");
+
+                case 110:
+                    portfolioCard = Portfolios.createPortfolio110Panel();
+                    c.add(portfolioCard, "portfolio");
+                    card.show(c, "portfolio");
+                case 121:
+                    portfolioCard = Portfolios.createPortfolio121Panel();
+                    c.add(portfolioCard, "portfolio");
+                    card.show(c, "portfolio");
+                case 120:
+                    portfolioCard = Portfolios.createPortfolio120Panel();
+                    c.add(portfolioCard, "portfolio");
+                    card.show(c, "portfolio");
+                case 131:
+                    portfolioCard = Portfolios.createPortfolio131Panel();
+                    c.add(portfolioCard, "portfolio");
+                    card.show(c, "portfolio");
+                case 130:
+                    portfolioCard = Portfolios.createPortfolio130Panel();
+                    c.add(portfolioCard, "portfolio");
+                    card.show(c, "portfolio");
+                case 211:
+                    portfolioCard = Portfolios.createPortfolio211Panel();
+                    c.add(portfolioCard, "portfolio");
+                    card.show(c, "portfolio");
+                case 210:
+                    portfolioCard = Portfolios.createPortfolio210Panel();
+                    c.add(portfolioCard, "portfolio");
+                    card.show(c, "portfolio");
+                case 221:
+                    portfolioCard = Portfolios.createPortfolio221Panel();
+                    c.add(portfolioCard, "portfolio");
+                    card.show(c, "portfolio");
+                case 220:
+                    portfolioCard = Portfolios.createPortfolio220Panel();
+                    c.add(portfolioCard, "portfolio");
+                    card.show(c, "portfolio");
+                case 231:
+                    portfolioCard = Portfolios.createPortfolio231Panel();
+                    c.add(portfolioCard, "portfolio");
+                    card.show(c, "portfolio");
+                case 230:
+                    portfolioCard = Portfolios.createPortfolio230Panel();
+                    c.add(portfolioCard, "portfolio");
+                    card.show(c, "portfolio");
+                case 311:
+                    portfolioCard = Portfolios.createPortfolio311Panel();
+                    c.add(portfolioCard, "portfolio");
+                    card.show(c, "portfolio");
+                case 310:
+                    portfolioCard = Portfolios.createPortfolio310Panel();
+                    c.add(portfolioCard, "portfolio");
+                    card.show(c, "portfolio");
+                case 321:
+                    portfolioCard = Portfolios.createPortfolio321Panel();
+                    c.add(portfolioCard, "portfolio");
+                    card.show(c, "portfolio");
+                case 320:
+                    portfolioCard = Portfolios.createPortfolio320Panel();
+                    c.add(portfolioCard, "portfolio");
+                    card.show(c, "portfolio");
+                case 331:
+                    portfolioCard = Portfolios.createPortfolio331Panel();
+                    c.add(portfolioCard, "portfolio");
+                    card.show(c, "portfolio");
+                case 330:
+                    portfolioCard = Portfolios.createPortfolio330Panel();
+                    c.add(portfolioCard, "portfolio");
+                    card.show(c, "portfolio");
+                default:
+                    Portfolios.createDefaultPortfolioPanel();
 
             }
+
+        }
 
 // TODO: create seperate method. Pass in profile and return a number for a switch statement. Display card bases on that
     }
     // (RISK)(TIME)(CONTRIBUTE)
 
-    public static int DeterminePortfolio(Profile profile){
+    public static int DeterminePortfolio(Profile profile) {
 
-            // Low risk
-            if(profile.getRisk() == 1){
-                if (profile.getTimePeriod() == 1){
-                    // Contribute monthly
-                    if(profile.isContributeMonthly()){
-                        return 111;
-                    }
-                    // Not contribute monthly
-                    else{
-                        return 110;
-                    }
+        // Low risk
+        if (profile.getRisk() == 1) {
+            if (profile.getTimePeriod() == 1) {
+                // Contribute monthly
+                if (profile.isContributeMonthly()) {
+                    return 111;
                 }
-                else if(profile.getTimePeriod() == 2){
-                    // Contribute monthly
-                    if(profile.isContributeMonthly()){
-                        return 121;
-                    }
-                    // Not contribute monthly
-                    else{
-                        return 120;
-                    }
+                // Not contribute monthly
+                else {
+                    return 110;
                 }
-                else if(profile.getTimePeriod() == 3){
-                    // Contribute monthly
-                    if(profile.isContributeMonthly()){
-                        return 131;
-                    }
-                    // Not contribute monthly
-                    else{
-                        return 130;
-                    }
+            } else if (profile.getTimePeriod() == 2) {
+                // Contribute monthly
+                if (profile.isContributeMonthly()) {
+                    return 121;
+                }
+                // Not contribute monthly
+                else {
+                    return 120;
+                }
+            } else if (profile.getTimePeriod() == 3) {
+                // Contribute monthly
+                if (profile.isContributeMonthly()) {
+                    return 131;
+                }
+                // Not contribute monthly
+                else {
+                    return 130;
+                }
+            }
+        }
+
+        // Medium Risk
+        else if (profile.getRisk() == 2) {
+            if (profile.getTimePeriod() == 1) {
+                // Contribute monthly
+                if (profile.isContributeMonthly()) {
+                    return 211;
+                }
+                // Not contribute monthly
+                else {
+                    return 210;
+                }
+            } else if (profile.getTimePeriod() == 2) {
+                // Contribute monthly
+                if (profile.isContributeMonthly()) {
+                    return 221;
+                }
+                // Not contribute monthly
+                else {
+                    return 220;
+                }
+            } else if (profile.getTimePeriod() == 3) {
+                // Contribute monthly
+                if (profile.isContributeMonthly()) {
+                    return 231;
+                }
+                // Not contribute monthly
+                else {
+                    return 230;
                 }
             }
 
-            // Medium Risk
-            else if(profile.getRisk() == 2){
-                if (profile.getTimePeriod() == 1){
-                    // Contribute monthly
-                    if(profile.isContributeMonthly()){
-                        return 211;
-                    }
-                    // Not contribute monthly
-                    else{
-                        return 210;
-                    }
+        }
+        // High Risk
+        else if (profile.getRisk() == 3) {
+            if (profile.getTimePeriod() == 1) {
+                // Contribute monthly
+                if (profile.isContributeMonthly()) {
+                    return 311;
                 }
-                else if(profile.getTimePeriod() == 2){
-                    // Contribute monthly
-                    if(profile.isContributeMonthly()){
-                        return 221;
-                    }
-                    // Not contribute monthly
-                    else{
-                        return 220;
-                    }
+                // Not contribute monthly
+                else {
+                    return 310;
                 }
-                else if(profile.getTimePeriod() == 3){
-                    // Contribute monthly
-                    if(profile.isContributeMonthly()){
-                        return 231;
-                    }
-                    // Not contribute monthly
-                    else{
-                        return 230;
-                    }
+            } else if (profile.getTimePeriod() == 2) {
+                // Contribute monthly
+                if (profile.isContributeMonthly()) {
+                    return 321;
                 }
-
+                // Not contribute monthly
+                else {
+                    return 320;
+                }
+            } else if (profile.getTimePeriod() == 3) {
+                // Contribute monthly
+                if (profile.isContributeMonthly()) {
+                    return 331;
+                }
+                // Not contribute monthly
+                else {
+                    return 330;
+                }
             }
-            // High Risk
-            else if(profile.getRisk() == 3){
-                if (profile.getTimePeriod() == 1){
-                    // Contribute monthly
-                    if(profile.isContributeMonthly()){
-                        return 311;
-                    }
-                    // Not contribute monthly
-                    else{
-                        return 310;
-                    }
-                }
-                else if(profile.getTimePeriod() == 2){
-                    // Contribute monthly
-                    if(profile.isContributeMonthly()){
-                        return 321;
-                    }
-                    // Not contribute monthly
-                    else{
-                        return 320;
-                    }
-                }
-                else if(profile.getTimePeriod() == 3){
-                    // Contribute monthly
-                    if(profile.isContributeMonthly()){
-                        return 331;
-                    }
-                    // Not contribute monthly
-                    else{
-                        return 330;
-                    }
-                }
 
-            }
+        }
         return 0;
     }
 
 
-    }
+}
 
 
