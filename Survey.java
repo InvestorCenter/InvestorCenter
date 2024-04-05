@@ -142,12 +142,181 @@ public class Survey extends JFrame implements ActionListener {
                 profile.setTimePeriod(3);
             }
             profile.uploadProfile();
+            int portfolio = DeterminePortfolio(profile);
+            switch (portfolio) {
+                case 111:
+                    card.show(c, "portfolio111");
+                    break;
+                case 110:
+                    card.show(c, "portfolio110");
+                    break;
+                case 121:
+                    card.show(c, "portfolio121");
+                    break;
+                case 120:
+                    card.show(c, "portfolio120");
+                    break;
+                case 131:
+                    card.show(c, "portfolio131");
+                    break;
+                case 130:
+                    card.show(c, "portfolio130");
+                    break;
+                case 211:
+                    card.show(c, "portfolio211");
+                    break;
+                case 210:
+                    card.show(c, "portfolio210");
+                    break;
+                case 221:
+                    card.show(c, "portfolio221");
+                    break;
+                case 220:
+                    card.show(c, "portfolio220");
+                    break;
+                case 231:
+                    card.show(c, "portfolio231");
+                    break;
+                case 230:
+                    card.show(c, "portfolio230");
+                    break;
+                case 311:
+                    card.show(c, "portfolio311");
+                    break;
+                case 310:
+                    card.show(c, "portfolio310");
+                    break;
+                case 321:
+                    card.show(c, "portfolio321");
+                    break;
+                case 320:
+                    card.show(c, "portfolio320");
+                    break;
+                case 331:
+                    card.show(c, "portfolio331");
+                    break;
+                case 330:
+                    card.show(c, "portfolio330");
+                    break;
+                default:
+                    card.show(c, "defaultPortfolio");
+                    break;
+            }
 
         }
+
+// TODO: create seperate method. Pass in profile and return a number for a switch statement. Display card bases on that
+    }
+    // (RISK)(TIME)(CONTRIBUTE)
+
+    public static int DeterminePortfolio(Profile profile){
+
+            // Low risk
+            if(profile.getRisk() == 1){
+                if (profile.getTimePeriod() == 1){
+                    // Contribute monthly
+                    if(profile.isContributeMonthly()){
+                        return 111;
+                    }
+                    // Not contribute monthly
+                    else{
+                        return 110;
+                    }
+                }
+                else if(profile.getTimePeriod() == 2){
+                    // Contribute monthly
+                    if(profile.isContributeMonthly()){
+                        return 121;
+                    }
+                    // Not contribute monthly
+                    else{
+                        return 120;
+                    }
+                }
+                else if(profile.getTimePeriod() == 3){
+                    // Contribute monthly
+                    if(profile.isContributeMonthly()){
+                        return 131;
+                    }
+                    // Not contribute monthly
+                    else{
+                        return 130;
+                    }
+                }
+            }
+
+            // Medium Risk
+            else if(profile.getRisk() == 2){
+                if (profile.getTimePeriod() == 1){
+                    // Contribute monthly
+                    if(profile.isContributeMonthly()){
+                        return 211;
+                    }
+                    // Not contribute monthly
+                    else{
+                        return 210;
+                    }
+                }
+                else if(profile.getTimePeriod() == 2){
+                    // Contribute monthly
+                    if(profile.isContributeMonthly()){
+                        return 221;
+                    }
+                    // Not contribute monthly
+                    else{
+                        return 220;
+                    }
+                }
+                else if(profile.getTimePeriod() == 3){
+                    // Contribute monthly
+                    if(profile.isContributeMonthly()){
+                        return 231;
+                    }
+                    // Not contribute monthly
+                    else{
+                        return 230;
+                    }
+                }
+
+            }
+            // High Risk
+            else if(profile.getRisk() == 3){
+                if (profile.getTimePeriod() == 1){
+                    // Contribute monthly
+                    if(profile.isContributeMonthly()){
+                        return 311;
+                    }
+                    // Not contribute monthly
+                    else{
+                        return 310;
+                    }
+                }
+                else if(profile.getTimePeriod() == 2){
+                    // Contribute monthly
+                    if(profile.isContributeMonthly()){
+                        return 321;
+                    }
+                    // Not contribute monthly
+                    else{
+                        return 320;
+                    }
+                }
+                else if(profile.getTimePeriod() == 3){
+                    // Contribute monthly
+                    if(profile.isContributeMonthly()){
+                        return 331;
+                    }
+                    // Not contribute monthly
+                    else{
+                        return 330;
+                    }
+                }
+
+            }
+        return 0;
+    }
+
 
     }
 
 
-
-
-}
