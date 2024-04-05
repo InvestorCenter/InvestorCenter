@@ -29,7 +29,7 @@ public class Portfolios {
             default -> createDefaultPortfolioPanel();
         };
     }
-
+    // (RISK)(TIME)(CONTRIBUTE)
     static JPanel createPortfolio111Panel() {
         JPanel panel = new JPanel();
         panel.setLayout(new BorderLayout());
@@ -48,6 +48,7 @@ public class Portfolios {
             JLabel descriptionLabel = new JLabel("The TD Advantage Balanced Growth Portfolio is a diversified investment fund managed by TD Asset Management, designed to pursue long-term growth by investing in a mix of equities, fixed income securities, and alternative investments. It aims to strike a balance between growth potential and risk management to achieve optimal returns for investors.");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 18));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
 
         }
