@@ -15,6 +15,7 @@ public class ProfileUtil {
         // Risk amount
         if (risk == 1) {
             code.append('1');
+
         } else if (risk == 2) {
             code.append('2');
         } else if (risk == 3) {
