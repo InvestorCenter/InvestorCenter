@@ -50,11 +50,15 @@ public class Auth {
     }
 
     public static int getUserMonthlyAmount(String username) {
-        return GetValueFromApi(BASE_ENDPOINT + "getUserMonthlyAmount/" + username);
+        return GetValueFromApi(BASE_ENDPOINT + "getUserMonthly/" + username);
     }
 
     public static int getUserTimePeriod(String username) {
         return GetValueFromApi(BASE_ENDPOINT + "getUserTimePeriod/" + username);
+    }
+
+    public static int getUserIncome(String username) {
+        return GetValueFromApi(BASE_ENDPOINT + "getUserIncome/" + username);
     }
 
 
@@ -96,6 +100,7 @@ public class Auth {
             String line;
             while ((line = rd.readLine()) != null) {
                 response.append(line + '\r');
+
             }
             rd.close();
         } catch (Exception e) {

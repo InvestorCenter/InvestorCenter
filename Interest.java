@@ -59,7 +59,6 @@ public class Interest {
 
 
                set[i] = currentInterest;
-               System.out.println(dataCopy[i] + " made " + currentInterest);
 
 
 
@@ -67,12 +66,10 @@ public class Interest {
             else if (i == dataCopy.length-1){
                 double currentInterest = (dataCopy[i] * (interestRate/100));
                // get previous data
-               double prevInterest   = interestSet[i-1];
                interestSet[i] = currentInterest;
                dataCopy[i] += currentInterest;
 
                set[i] = currentInterest;
-               System.out.println(dataCopy[i] + " made " + currentInterest);
             }
             else{
                 interestSet[0] = 0;

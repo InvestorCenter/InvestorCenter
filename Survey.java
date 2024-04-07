@@ -93,7 +93,6 @@ public class Survey extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == intro.next) {
             profile.setUsername(User.getName());
-            System.out.println(User.getName());
 
             if(profile.checkProfile()){
                 // TODO: GET INFO FROM DATABASE OF THE PROFILE GIVEN THE USERNAME
@@ -101,7 +100,6 @@ public class Survey extends JFrame implements ActionListener {
                 profile.setContributeMonthly(profile.getContributeMonthFromDB());
                 profile.setTimePeriod(profile.getTimePeriodFromDB());
                 int portfolio = DeterminePortfolio(profile);
-                System.out.println(portfolio);
                 switch (portfolio) {
                     case 111:
                         portfolioCard = Portfolios.createPortfolio111Panel();
@@ -207,7 +205,6 @@ public class Survey extends JFrame implements ActionListener {
 
         } else if (e.getSource() == incomePanel.next) {
             profile.setIncome(Integer.valueOf(incomePanel.incomeTextField.getText()));
-            System.out.println(profile.getIncome());
             card.show(c, "risk");
 
         } else if (e.getSource() == riskPanel.nextButton) {
@@ -222,7 +219,6 @@ public class Survey extends JFrame implements ActionListener {
         } else if (e.getSource() == yesNoContributions.next) {
             if (yesNoContributions.yesButton.isSelected()) {
                 profile.setContributeMonthly(true);
-                System.out.println(profile.getMonthlyAmount());
                 card.show(c, "amount");
             } else if (yesNoContributions.noButton.isSelected()) {
                 profile.setContributeMonthly(false);
