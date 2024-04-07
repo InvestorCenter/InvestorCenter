@@ -119,6 +119,8 @@ public class SignIn extends JFrame {
                 SignUp signUp = new SignUp();
                 signUp.signUpMethod();
                 setVisible(false);
+                
+
             }
         });
 

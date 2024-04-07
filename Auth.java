@@ -58,6 +58,12 @@ public class Auth {
     }
 
 
+    public static int getUserIncome(String username) {
+        return GetValueFromApi(BASE_ENDPOINT + "getUserIncome/" + username);
+    }
+
+
+
     private static boolean GetFromApi(String strUrl) {
         HttpURLConnection connection = null;
         StringBuilder response = new StringBuilder();
@@ -96,6 +102,8 @@ public class Auth {
             String line;
             while ((line = rd.readLine()) != null) {
                 response.append(line + '\r');
+
+
             }
             rd.close();
         } catch (Exception e) {

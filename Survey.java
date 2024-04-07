@@ -32,6 +32,19 @@ public class Survey extends JFrame implements ActionListener {
         setLocationRelativeTo(null);
 
 
+
+        // Function to set visibility of JFrame.
+        setVisible(true);
+
+        // Function to set default operation of JFrame.
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+        // Function to set size of JFrame.
+        setTitle("Survey");
+        setSize(new Dimension(400, 400));
+        setLocationRelativeTo(null);
+
+
         // Function to set visibility of JFrame.
         setVisible(true);
 
@@ -93,7 +106,9 @@ public class Survey extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == intro.next) {
             profile.setUsername(User.getName());
+
             System.out.println(User.getName());
+
 
             if(profile.checkProfile()){
                 // TODO: GET INFO FROM DATABASE OF THE PROFILE GIVEN THE USERNAME
@@ -101,7 +116,9 @@ public class Survey extends JFrame implements ActionListener {
                 profile.setContributeMonthly(profile.getContributeMonthFromDB());
                 profile.setTimePeriod(profile.getTimePeriodFromDB());
                 int portfolio = DeterminePortfolio(profile);
+
                 System.out.println(portfolio);
+
                 switch (portfolio) {
                     case 111:
                         portfolioCard = Portfolios.createPortfolio111Panel();
@@ -207,7 +224,6 @@ public class Survey extends JFrame implements ActionListener {
 
         } else if (e.getSource() == incomePanel.next) {
             profile.setIncome(Integer.valueOf(incomePanel.incomeTextField.getText()));
-            System.out.println(profile.getIncome());
             card.show(c, "risk");
 
         } else if (e.getSource() == riskPanel.nextButton) {
@@ -222,7 +238,9 @@ public class Survey extends JFrame implements ActionListener {
         } else if (e.getSource() == yesNoContributions.next) {
             if (yesNoContributions.yesButton.isSelected()) {
                 profile.setContributeMonthly(true);
+
                 System.out.println(profile.getMonthlyAmount());
+
                 card.show(c, "amount");
             } else if (yesNoContributions.noButton.isSelected()) {
                 profile.setContributeMonthly(false);
@@ -327,6 +345,109 @@ public class Survey extends JFrame implements ActionListener {
 
         }
 
+
+    }
+
+    public static int DeterminePortfolio(Profile profile) {
+
+        // Low risk
+        if (profile.getRisk() == 1) {
+            if (profile.getTimePeriod() == 1) {
+                // Contribute monthly
+                if (profile.isContributeMonthly()) {
+                    return 111;
+                }
+                // Not contribute monthly
+                else {
+                    return 110;
+                }
+            } else if (profile.getTimePeriod() == 2) {
+                // Contribute monthly
+                if (profile.isContributeMonthly()) {
+                    return 121;
+                }
+                // Not contribute monthly
+                else {
+                    return 120;
+                }
+            } else if (profile.getTimePeriod() == 3) {
+                // Contribute monthly
+                if (profile.isContributeMonthly()) {
+                    return 131;
+                }
+                // Not contribute monthly
+                else {
+                    return 130;
+                }
+            }
+        }
+
+        // Medium Risk
+        else if (profile.getRisk() == 2) {
+            if (profile.getTimePeriod() == 1) {
+                // Contribute monthly
+                if (profile.isContributeMonthly()) {
+                    return 211;
+                }
+                // Not contribute monthly
+                else {
+                    return 210;
+                }
+            } else if (profile.getTimePeriod() == 2) {
+                // Contribute monthly
+                if (profile.isContributeMonthly()) {
+                    return 221;
+                }
+                // Not contribute monthly
+                else {
+                    return 220;
+                }
+            } else if (profile.getTimePeriod() == 3) {
+                // Contribute monthly
+                if (profile.isContributeMonthly()) {
+                    return 231;
+                }
+                // Not contribute monthly
+                else {
+                    return 230;
+                }
+            }
+
+
+        }
+        // High Risk
+        else if (profile.getRisk() == 3) {
+            if (profile.getTimePeriod() == 1) {
+                // Contribute monthly
+                if (profile.isContributeMonthly()) {
+                    return 311;
+                }
+                // Not contribute monthly
+                else {
+                    return 310;
+                }
+            } else if (profile.getTimePeriod() == 2) {
+                // Contribute monthly
+                if (profile.isContributeMonthly()) {
+                    return 321;
+                }
+                // Not contribute monthly
+                else {
+                    return 320;
+                }
+            } else if (profile.getTimePeriod() == 3) {
+                // Contribute monthly
+                if (profile.isContributeMonthly()) {
+                    return 331;
+                }
+                // Not contribute monthly
+                else {
+                    return 330;
+                }
+            }
+
+        }
+        return 0;
     }
 
     public static int DeterminePortfolio(Profile profile) {
@@ -432,5 +553,10 @@ public class Survey extends JFrame implements ActionListener {
 
 
 }
+
+
+
+}
+
 
 
