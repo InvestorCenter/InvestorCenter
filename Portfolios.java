@@ -19,6 +19,7 @@ public class Portfolios {
 
         if (option == 0) {
             JLabel titleLabel = new JLabel("TD Advantage Balanced Growth Port - F");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
             // 8% yearly return
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -26,6 +27,7 @@ public class Portfolios {
             JLabel descriptionLabel = new JLabel("The TD Advantage Balanced Growth Portfolio is a diversified investment fund managed by TD Asset Management, designed to pursue long-term growth by investing in a mix of equities, fixed income securities, and alternative investments. It aims to strike a balance between growth potential and risk management to achieve optimal returns for investors.");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(8);
 
@@ -33,6 +35,8 @@ public class Portfolios {
         }
         if (option == 1) {
             JLabel titleLabel = new JLabel("TD Advantage Balanced Income Port - F");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             // 5% yearly return
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -40,6 +44,8 @@ public class Portfolios {
             JLabel descriptionLabel = new JLabel("The TD Advantage Balanced Growth Portfolio is a diversified investment fund managed by TD Asset Management, designed to pursue long-term growth by investing in a mix of equities, fixed income securities, and alternative investments. It aims to strike a balance between growth potential and risk management to achieve optimal returns for investors.");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(5);
 
@@ -56,6 +62,8 @@ public class Portfolios {
 
         if (option == 0) {
             JLabel titleLabel = new JLabel("Betterment Cash Management Account");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             // 5% interest
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -65,6 +73,8 @@ public class Portfolios {
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(5);
 
@@ -72,6 +82,8 @@ public class Portfolios {
         if (option == 1) {
 
             JLabel titleLabel = new JLabel("EquityMultiple");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             // 8%
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -81,6 +93,8 @@ public class Portfolios {
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(8);
 
@@ -99,6 +113,8 @@ public class Portfolios {
 
         if (option == 0) {
             JLabel titleLabel = new JLabel("TD Advantage Balanced Growth Port - A ");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             // 7%
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -108,6 +124,8 @@ public class Portfolios {
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(7);
 
@@ -115,6 +133,8 @@ public class Portfolios {
         }
         if (option == 1) {
             JLabel titleLabel = new JLabel("TD Advantage Balanced Growth Port - I");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             // 9%
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -124,6 +144,8 @@ public class Portfolios {
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(9);
 
@@ -141,6 +163,8 @@ public class Portfolios {
 // risk time contribute
         if (option == 0) {
             JLabel titleLabel = new JLabel("TD Q International Low Volatility ETF (TILV)");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             // 8%
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -150,6 +174,8 @@ public class Portfolios {
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(8);
 
@@ -158,6 +184,8 @@ public class Portfolios {
         if (option == 1) {
 
             JLabel titleLabel = new JLabel("TD Growth ETF Portfolio (TRGO)");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(titleLabel, BorderLayout.NORTH);
@@ -166,6 +194,8 @@ public class Portfolios {
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(20);
 
@@ -183,6 +213,8 @@ public class Portfolios {
 
         if (option == 0) {
             JLabel titleLabel = new JLabel("TD Advantage Balanced Income Port - I (TDB885)");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(titleLabel, BorderLayout.NORTH);
@@ -192,6 +224,8 @@ public class Portfolios {
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(7);
 
@@ -200,6 +234,8 @@ public class Portfolios {
         if (option == 1) {
 
             JLabel titleLabel = new JLabel("TD Advantage Balanced Income Port - A");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(titleLabel, BorderLayout.NORTH);
@@ -208,6 +244,8 @@ public class Portfolios {
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(7);
 
@@ -225,6 +263,8 @@ public class Portfolios {
 
         if (option == 0) {
             JLabel titleLabel = new JLabel("SPXL");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(titleLabel, BorderLayout.NORTH);
@@ -233,6 +273,8 @@ public class Portfolios {
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(14);
 
@@ -240,6 +282,8 @@ public class Portfolios {
         if (option == 1) {
 
             JLabel titleLabel = new JLabel("SPXS");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(titleLabel, BorderLayout.NORTH);
@@ -248,6 +292,8 @@ public class Portfolios {
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(17);
 
@@ -269,6 +315,8 @@ public class Portfolios {
 
         if (option == 0) {
             JLabel titleLabel = new JLabel("Visa inc (V) ");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(titleLabel, BorderLayout.NORTH);
@@ -277,6 +325,8 @@ public class Portfolios {
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(18);
 
@@ -284,6 +334,8 @@ public class Portfolios {
         if (option == 1) {
 
             JLabel titleLabel = new JLabel("Apple (AAPL) ");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(titleLabel, BorderLayout.NORTH);
@@ -292,6 +344,8 @@ public class Portfolios {
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(8);
 
@@ -309,6 +363,8 @@ public class Portfolios {
 
         if (option == 0) {
             JLabel titleLabel = new JLabel("American Express National Bank (Member FDIC)");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(titleLabel, BorderLayout.NORTH);
@@ -317,6 +373,8 @@ public class Portfolios {
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(9);
 
@@ -324,6 +382,8 @@ public class Portfolios {
         if (option == 1) {
 
             JLabel titleLabel = new JLabel("Jenius Bank Jenius Savings Account");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(titleLabel, BorderLayout.NORTH);
@@ -332,6 +392,8 @@ public class Portfolios {
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(5);
 
@@ -349,6 +411,8 @@ public class Portfolios {
 
         if (option == 0) {
             JLabel titleLabel = new JLabel("Amazon (AMZN)");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(titleLabel, BorderLayout.NORTH);
@@ -357,6 +421,8 @@ public class Portfolios {
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(40);
 
@@ -365,6 +431,8 @@ public class Portfolios {
         if (option == 1) {
 
             JLabel titleLabel = new JLabel("IShares NASDAQ 100 Index ETF");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(titleLabel, BorderLayout.NORTH);
@@ -373,6 +441,8 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(6);
 
@@ -391,6 +461,8 @@ public class Portfolios {
 
         if (option == 0) {
             JLabel titleLabel = new JLabel("UFB Direct Savings Accounts");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(titleLabel, BorderLayout.NORTH);
@@ -399,6 +471,8 @@ public class Portfolios {
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(5);
 
@@ -406,6 +480,8 @@ public class Portfolios {
         if (option == 1) {
 
             JLabel titleLabel = new JLabel("Capital One 360 Performance Savings");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(titleLabel, BorderLayout.NORTH);
@@ -414,6 +490,8 @@ public class Portfolios {
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(5);
 
@@ -431,6 +509,8 @@ public class Portfolios {
 
         if (option == 0) {
             JLabel titleLabel = new JLabel("Vanguard S&P 500 Index ETF");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(titleLabel, BorderLayout.NORTH);
@@ -439,6 +519,8 @@ public class Portfolios {
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(9);
 
@@ -446,6 +528,8 @@ public class Portfolios {
         if (option == 1) {
 
             JLabel titleLabel = new JLabel("Invesco QQQ trust");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(titleLabel, BorderLayout.NORTH);
@@ -454,6 +538,8 @@ public class Portfolios {
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(10);
 
@@ -471,6 +557,8 @@ public class Portfolios {
 
         if (option == 0) {
             JLabel titleLabel = new JLabel("CloudBank 24/7 Savings Accounts");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(titleLabel, BorderLayout.NORTH);
@@ -479,6 +567,8 @@ public class Portfolios {
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(6);
 
@@ -486,6 +576,8 @@ public class Portfolios {
         if (option == 1) {
 
             JLabel titleLabel = new JLabel("SoFi Bank Savings Accounts ");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(titleLabel, BorderLayout.NORTH);
@@ -494,6 +586,8 @@ public class Portfolios {
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(5);
 
@@ -515,6 +609,8 @@ public class Portfolios {
 
         if (option == 0) {
             JLabel titleLabel = new JLabel("Nice Ltd (NICE) ");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(titleLabel, BorderLayout.NORTH);
@@ -523,6 +619,8 @@ public class Portfolios {
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(9);
 
@@ -531,6 +629,8 @@ public class Portfolios {
         if (option == 1) {
 
             JLabel titleLabel = new JLabel("ClearPoint Neuro Inc (CLPT)");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(titleLabel, BorderLayout.NORTH);
@@ -539,6 +639,8 @@ public class Portfolios {
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(9);
 
@@ -557,6 +659,8 @@ public class Portfolios {
 
         if (option == 0) {
             JLabel titleLabel = new JLabel("SoFi Bank Savings Accounts ");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(titleLabel, BorderLayout.NORTH);
@@ -565,6 +669,8 @@ public class Portfolios {
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(5);
 
@@ -572,6 +678,8 @@ public class Portfolios {
         if (option == 1) {
 
             JLabel titleLabel = new JLabel("HDFC Dynamic PE Ratio FoF Direct Growth ");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(titleLabel, BorderLayout.NORTH);
@@ -580,6 +688,8 @@ public class Portfolios {
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(16);
 
@@ -597,6 +707,8 @@ public class Portfolios {
 
         if (option == 0) {
             JLabel titleLabel = new JLabel("Meta platforms Inc (META)");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(titleLabel, BorderLayout.NORTH);
@@ -606,6 +718,8 @@ public class Portfolios {
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(12);
         }
@@ -613,6 +727,8 @@ public class Portfolios {
         if (option == 1) {
 
             JLabel titleLabel = new JLabel("Bank of Hawaii Corp (BOH)   ");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(titleLabel, BorderLayout.NORTH);
@@ -622,6 +738,8 @@ public class Portfolios {
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(9);
 
@@ -640,6 +758,8 @@ public class Portfolios {
 
         if (option == 0) {
             JLabel titleLabel = new JLabel("ICICI Prudential Asset Allocator Fund (FOF) Direct Growth  ");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(titleLabel, BorderLayout.NORTH);
@@ -649,6 +769,8 @@ public class Portfolios {
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(19);
 
@@ -657,6 +779,8 @@ public class Portfolios {
         if (option == 1) {
 
             JLabel titleLabel = new JLabel("HDFC Gold Direct Plan Growth");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(titleLabel, BorderLayout.NORTH);
@@ -665,6 +789,8 @@ public class Portfolios {
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(15);
         }
@@ -681,6 +807,8 @@ public class Portfolios {
 
         if (option == 0) {
             JLabel titleLabel = new JLabel("NVIDA Corporation (NVDA)");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(titleLabel, BorderLayout.NORTH);
@@ -689,6 +817,8 @@ public class Portfolios {
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(20);
         }
@@ -696,6 +826,8 @@ public class Portfolios {
         if (option == 1) {
 
             JLabel titleLabel = new JLabel("Tesla (TSLA)  ");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(titleLabel, BorderLayout.NORTH);
@@ -705,6 +837,8 @@ public class Portfolios {
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(18);
 
@@ -722,6 +856,8 @@ public class Portfolios {
 
         if (option == 0) {
             JLabel titleLabel = new JLabel("Sundaram Equity Hybrid Fund Direct Growth");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(titleLabel, BorderLayout.NORTH);
@@ -731,6 +867,8 @@ public class Portfolios {
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(22);
         }
@@ -738,6 +876,8 @@ public class Portfolios {
         if (option == 1) {
 
             JLabel titleLabel = new JLabel("SBI Gold Direct Plan Growth ");
+            titleLabel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
+
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(titleLabel, BorderLayout.NORTH);
@@ -747,6 +887,8 @@ public class Portfolios {
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            descriptionLabel.setBorder(BorderFactory.createEmptyBorder(0,10,0,10));
+
             panel.add(descriptionLabel, BorderLayout.CENTER);
             createGraph(15);
         }
@@ -762,6 +904,7 @@ public class Portfolios {
         JLabel titleLabel = new JLabel("Default Panel");
         titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
         titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
+
         panel.add(titleLabel, BorderLayout.NORTH);
         createGraphMed();
         return panel;
