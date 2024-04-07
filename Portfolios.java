@@ -138,35 +138,36 @@ public class Portfolios {
 
         Random random = new Random();
         int option = random.nextInt(2);
-
+// risk time contribute
         if (option == 0) {
-            JLabel titleLabel = new JLabel("VanGuard  ");
+            JLabel titleLabel = new JLabel("TD Q International Low Volatility ETF (TILV)");
+            // 8%
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(titleLabel, BorderLayout.NORTH);
-            String description = "Vanguard is a renowned investment management company known for its low-cost index funds and exchange-traded funds (ETFs). With a focus on investor ownership and long-term growth, Vanguard offers a wide range of investment options tailored to various risk tolerances and financial goals.";
+            String description = "TD Q International Low Volatility ETF seeks to achieve long-term capital growth by investing directly in, or obtaining exposure to, a diversified portfolio of international stocks, including companies domiciled in the developed countries of Europe, Australasia, and the Far East, while seeking to reduce volatility.";
             JLabel descriptionLabel = new JLabel();
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraphLow();
+            createGraph(8);
 
 
         }
         if (option == 1) {
 
-            JLabel titleLabel = new JLabel("S&P 500 ");
+            JLabel titleLabel = new JLabel("TD Growth ETF Portfolio (TRGO)");
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(titleLabel, BorderLayout.NORTH);
-            String description = "The S&P 500 is a stock market index that measures the performance of 500 large companies listed on stock exchanges in the United States. It is widely regarded as one of the best indicators of the U.S. stock market's health and is commonly used as a benchmark for the overall performance of the U.S. economy.";
+            String description = "TD Growth ETF Portfolio seeks to generate long-term capital growth with the added potential for earning a modest level of income. The TD ETF invests primarily in units of other exchange-traded funds, emphasizing exchange-traded funds with greater potential for capital growth.";
             JLabel descriptionLabel = new JLabel();
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraphLow();
+            createGraph(20);
 
 
         }
@@ -181,7 +182,7 @@ public class Portfolios {
         int option = random.nextInt(2);
 
         if (option == 0) {
-            JLabel titleLabel = new JLabel("TD Advantage Balanced Income Port - I");
+            JLabel titleLabel = new JLabel("TD Advantage Balanced Income Port - I (TDB885)");
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(titleLabel, BorderLayout.NORTH);
@@ -192,7 +193,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraphLow();
+            createGraph(7);
 
 
         }
@@ -208,7 +209,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraphLow();
+            createGraph(7);
 
         }
 
@@ -233,7 +234,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraphLow();
+            createGraph(14);
 
         }
         if (option == 1) {
@@ -248,7 +249,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraphLow();
+            createGraph(17);
 
 
         }
@@ -277,7 +278,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraphMed();
+            createGraph(18);
 
         }
         if (option == 1) {
@@ -292,7 +293,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraphMed();
+            createGraph(8);
 
         }
 
@@ -317,7 +318,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraphMed();
+            createGraph(9);
 
         }
         if (option == 1) {
@@ -332,7 +333,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraphMed();
+            createGraph(5);
 
         }
 
@@ -357,7 +358,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraphMed();
+            createGraph(40);
 
 
         }
@@ -373,7 +374,7 @@ public class Portfolios {
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraphMed();
+            createGraph(6);
 
 
         }
@@ -399,7 +400,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraphMed();
+            createGraph(5);
 
         }
         if (option == 1) {
@@ -414,7 +415,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraphMed();
+            createGraph(5);
 
         }
 
@@ -439,7 +440,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraphMed();
+            createGraph(9);
 
         }
         if (option == 1) {
@@ -454,7 +455,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraphMed();
+            createGraph(10);
 
         }
 
@@ -479,7 +480,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraphMed();
+            createGraph(6);
 
         }
         if (option == 1) {
@@ -494,7 +495,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraphMed();
+            createGraph(5);
 
         }
 
@@ -523,7 +524,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraphHigh();
+            createGraph(9);
 
 
         }
@@ -539,7 +540,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraphHigh();
+            createGraph(9);
 
 
         }
@@ -565,7 +566,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraphHigh();
+            createGraph(5);
 
         }
         if (option == 1) {
@@ -580,7 +581,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraphHigh();
+            createGraph(16);
 
         }
 
@@ -606,7 +607,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraphHigh();
+            createGraph(12);
         }
 
         if (option == 1) {
@@ -622,7 +623,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraphHigh();
+            createGraph(9);
 
 
         }
@@ -649,7 +650,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraphHigh();
+            createGraph(19);
 
 
         }
@@ -665,7 +666,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraphHigh();
+            createGraph(15);
         }
 
         return panel;
@@ -683,15 +684,13 @@ public class Portfolios {
             titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
             titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(titleLabel, BorderLayout.NORTH);
-
-
             String description = "NVIDIA Corporation is a leading multinational technology company known for its graphics processing units (GPUs) and semiconductor products. NVDA is at the forefront of innovation in artificial intelligence, gaming, data centers, and autonomous vehicles, offering cutting-edge solutions that power various industries worldwide.";
             JLabel descriptionLabel = new JLabel();
             descriptionLabel.setText("<html>" + description + "</html>");
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraphHigh();
+            createGraph(20);
         }
 
         if (option == 1) {
@@ -707,7 +706,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraphHigh();
+            createGraph(18);
 
         }
 
@@ -733,7 +732,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraphHigh();
+            createGraph(22);
         }
 
         if (option == 1) {
@@ -749,7 +748,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraphHigh();
+            createGraph(15);
         }
         return panel;
     }
