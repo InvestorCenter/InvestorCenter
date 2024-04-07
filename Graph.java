@@ -3,7 +3,12 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;
 import java.awt.geom.QuadCurve2D;
-
+// TODO: MAKE GRAPH ONE CURVE/LINE TO SHOW INTEREST EARNED. WILL BE EASIER TO LOOK AT
+//TODO: MAKE SURE WE ADD THE MONTHLY CONTRIBUTIONS (CAN DO THIS BY MULTIPLYING THE CONTRIBUTION AMOUNT BY 12 THEN ADDING TO PRINCIPLE AND MULTIPLYING BY INTEREST RATE) DO THIS FOR EVERY YEAR
+// FIXME: GRAPH DATA STARTS AT 1 YEAR BUT IT SHOULD START AT 0 YEARS.
+// FIXME: GRAPH CREATES MULTIPLE FRAMES (OVERLAPS LIKE 10 OF THEM)
+// TODO: SHOULD WE ADD FIELDS TO MODIFY THE GRAPH ONCE ITS ALREADY MADE
+// FIXME: CAN NO LONGER SEE THE LINE ON THE GRAPH
 public class Graph extends JPanel implements MouseMotionListener {
     private static final int OFFSETX = 100;
     private static final int OFFSETY = 150;
@@ -70,11 +75,7 @@ public class Graph extends JPanel implements MouseMotionListener {
                 g2d.draw(interstCurve);
                 g2d.setColor(new Color(0, 255, 0, 100));
 
-                if (i > 1) {
-                    g2d.setColor(Color.BLACK);
-                    g2d.drawString(Integer.toString(i - 1), x2-5, getHeight() - OFFSETY + 20);
-                }
-                if (i == data.length - 1) {
+                if (i >= 1) {
                     g2d.setColor(Color.BLACK);
                     g2d.drawString(Integer.toString(i), x1-5, getHeight() - OFFSETY + 20);
                 }

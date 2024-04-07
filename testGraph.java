@@ -3,6 +3,7 @@ import javax.swing.*;
 public class testGraph{
     private static final int WIDTH = 500;
     private static final int HEIGHT = 500;
+    int[] timePeriod = {2000, 2001, 2002, 2003, 2004, 2005};
     public testGraph(){
         SwingUtilities.invokeLater(() -> {
             JFrame frame = new JFrame("Curved Graph Example");

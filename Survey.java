@@ -12,11 +12,12 @@ public class Survey extends JFrame implements ActionListener {
 
     // Declaration of objects of JButton class.
     Intro intro;
-    IncomePanel incomePanel;
+    InitialContribution initialContribution;
     RiskPanel riskPanel;
     YesNoContributions yesNoContributions;
     ContributionAmount contributionAmount;
     TimePeriod timePeriod;
+    WelcomeBack welcomeBack;
     // Declaration of objects
     // of Container class.
     Container c;
@@ -60,14 +61,16 @@ public class Survey extends JFrame implements ActionListener {
         // set the layout
         c.setLayout(card);
 
+        welcomeBack = new WelcomeBack();
+        welcomeBack.next.addActionListener(this);
         intro = new Intro();
         intro.next.addActionListener(this);
 
-        incomePanel = new IncomePanel();
-        incomePanel.setPreferredSize(new Dimension(400, 400));
-        incomePanel.requestFocus();
-        incomePanel.incomeTextField.setEditable(true);
-        incomePanel.next.addActionListener(this);
+        initialContribution = new InitialContribution();
+        initialContribution.setPreferredSize(new Dimension(400, 400));
+        initialContribution.requestFocus();
+        initialContribution.initialContributionField.setEditable(true);
+        initialContribution.next.addActionListener(this);
 
 
         riskPanel = new RiskPanel();
@@ -83,12 +86,12 @@ public class Survey extends JFrame implements ActionListener {
         timePeriod = new TimePeriod();
         timePeriod.next.addActionListener(this);
         profile = new Profile();
-
+        c.add(welcomeBack, "welcomeBack");
 
         c.add(intro, "welcome");
 
         // Adding the incomePanel
-        c.add(incomePanel, "income");
+        c.add(initialContribution, "income");
 
         // Adding the riskPanel
         c.add(riskPanel, "risk");
@@ -98,22 +101,33 @@ public class Survey extends JFrame implements ActionListener {
         c.add(contributionAmount, "amount");
 
         c.add(timePeriod, "timePeriod");
+        profile.setUsername(User.getName());
 
 
+        if (profile.checkProfile()){
+            profile.setRisk(profile.getRiskFromDB());
+            profile.setContributeMonthly(profile.getContributeMonthFromDB());
+            profile.setTimePeriod(profile.getTimePeriodFromDB());
+            // show welcome back panel if profile is valid
+            card.show(c, "welcomeBack");
+
+            //int portfolio = DeterminePortfolio(profile);
+        } else {
+            // show intro panel if profile is not valid
+            card.show(c, "welcome");
+        }
     }
+
 
 
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == intro.next) {
-            profile.setUsername(User.getName());
+            card.show(c, "income");
+        }
 
+        else if (e.getSource() == welcomeBack.next) {
             System.out.println(User.getName());
-
-
             if(profile.checkProfile()){
-                profile.setRisk(profile.getRiskFromDB());
-                profile.setContributeMonthly(profile.getContributeMonthFromDB());
-                profile.setTimePeriod(profile.getTimePeriodFromDB());
                 int portfolio = DeterminePortfolio(profile);
 
                 System.out.println(portfolio);
@@ -221,8 +235,8 @@ public class Survey extends JFrame implements ActionListener {
                 card.show(c, "income");
             }
 
-        } else if (e.getSource() == incomePanel.next) {
-            profile.setIncome(Integer.valueOf(incomePanel.incomeTextField.getText()));
+        } else if (e.getSource() == initialContribution.next) {
+            profile.setIncome(Integer.valueOf(initialContribution.initialContributionField.getText()));
             card.show(c, "risk");
 
         } else if (e.getSource() == riskPanel.nextButton) {
