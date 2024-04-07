@@ -29,20 +29,7 @@ public class Survey extends JFrame implements ActionListener {
 
         // Function to set size of JFrame.
         setTitle("Survey");
-        setSize(new Dimension(500, 400));
-        setLocationRelativeTo(null);
-
-
-
-        // Function to set visibility of JFrame.
-        setVisible(true);
-
-        // Function to set default operation of JFrame.
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-
-        // Function to set size of JFrame.
-        setTitle("Survey");
-        setSize(new Dimension(400, 400));
+        setSize(new Dimension(600, 400));
         setLocationRelativeTo(null);
 
 
