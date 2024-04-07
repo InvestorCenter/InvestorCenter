@@ -37,45 +37,27 @@ public class Interest {
        return dataSet;
     }
 
-    public double[] calculateInterest(){
-        // FIXME:
-        // Interest is not being stacked up, interest needs to be added to each data point, 
-        // 1000 makes 60 dollars in interest
-        // SInce we add 1000 each year, we add that 60 so it becomes 2060
-        // 6% of 2060 is 123.60
-        // we add another grand so its 3183.60
+    public double[] calculateInterest() {
         double[] set = new double[interestSet.length];
-        
-        for (int i = 0; i < dataCopy.length; i++){
-            if (i>0 && i < dataCopy.length - 1){
 
-                
-                double currentInterest = (dataCopy[i] * (interestRate/100));
-               // get previous data
-               double prevInterest = interestSet[i-1];
-               interestSet[i] = currentInterest + prevInterest;
-               dataCopy[i+1] += currentInterest + prevInterest;;
-
-
-
-               set[i] = currentInterest;
-
-
-
-            }
-            else if (i == dataCopy.length-1){
-                double currentInterest = (dataCopy[i] * (interestRate/100));
-               // get previous data
-               interestSet[i] = currentInterest;
-               dataCopy[i] += currentInterest;
-
-               set[i] = currentInterest;
-            }
-            else{
-                interestSet[0] = 0;
+        for (int i = 0; i < dataCopy.length; i++) {
+            // calculate interest for the current amount
+            double currentInterest = (dataCopy[i] * (interestRate / 100));
+            // store it separately
+            set[i] = currentInterest;
+            // if it's not the last data point
+            if (i < dataCopy.length - 1) {
+                // aggregate the interest
+                interestSet[i] = (i > 0 ? interestSet[i - 1] : 0) + currentInterest;
+                // update the next principal amount
+                dataCopy[i + 1] += interestSet[i];
+            } else {
+                // for the last data point
+                interestSet[i] = (i > 0 ? interestSet[i - 1] : 0) + currentInterest;
+                dataCopy[i] += currentInterest;
             }
         }
-        
+
         return set;
     }
 }
