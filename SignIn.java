@@ -27,7 +27,7 @@ public class SignIn extends JFrame {
         titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
         titleLabel.setBounds(250, 10, 100, 30);
 
-        Color bgColor = Color.decode("#fffbf4"); // Replace #FF0000 with your hex color code
+        Color bgColor = Color.decode("#fffbf4");
         getContentPane().setBackground(bgColor);
 
         //display logo
@@ -36,17 +36,15 @@ public class SignIn extends JFrame {
             Image image = ImageIO.read(imageFile);
             
             // Calculate the scaled width and height to fit within a specific size
-            int maxWidth = 225; // Maximum width
-            int maxHeight = 225; // Maximum height
+            int maxWidth = 225;
+            int maxHeight = 225;
             
             int originalWidth = image.getWidth(null);
             int originalHeight = image.getHeight(null);
             
-            // Calculate the scaled dimensions
             int scaledWidth = originalWidth;
             int scaledHeight = originalHeight;
             
-            // Check if scaling is needed
             if (originalWidth > maxWidth || originalHeight > maxHeight) {
                 double widthRatio = (double) maxWidth / originalWidth;
                 double heightRatio = (double) maxHeight / originalHeight;
@@ -59,7 +57,6 @@ public class SignIn extends JFrame {
             // Resize the image
             Image scaledImage = image.getScaledInstance(scaledWidth, scaledHeight, Image.SCALE_SMOOTH);
             
-            // Create a ImageIcon from the scaled image
             ImageIcon scaledIcon = new ImageIcon(scaledImage);
             
             // Create a JLabel for the scaled image

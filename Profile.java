@@ -11,17 +11,10 @@ public class Profile {
 
     // Getter and setter for income
 
-    public String getUsername() {
-        return username;
-    }
     public void setUsername(String username) {
         this.username = username;
     }
 
-
-    public int getIncome() {
-        return income;
-    }
 
     public void setIncome(int income) {
         this.income = income;

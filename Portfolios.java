@@ -4,31 +4,6 @@ import java.util.Random;
 
 public class Portfolios {
 
-
-
-    public static JPanel getPortfolioPanel(String portfolioCode) {
-        return switch (portfolioCode) {
-            case "111" -> createPortfolio111Panel();
-            case "110" -> createPortfolio110Panel();
-            case "121" -> createPortfolio121Panel();
-            case "120" -> createPortfolio120Panel();
-            case "131" -> createPortfolio131Panel();
-            case "130" -> createPortfolio130Panel();
-            case "211" -> createPortfolio211Panel();
-            case "210" -> createPortfolio210Panel();
-            case "221" -> createPortfolio221Panel();
-            case "220" -> createPortfolio220Panel();
-            case "231" -> createPortfolio231Panel();
-            case "230" -> createPortfolio230Panel();
-            case "311" -> createPortfolio311Panel();
-            case "310" -> createPortfolio310Panel();
-            case "321" -> createPortfolio321Panel();
-            case "320" -> createPortfolio320Panel();
-            case "331" -> createPortfolio331Panel();
-            case "330" -> createPortfolio330Panel();
-            default -> createDefaultPortfolioPanel();
-        };
-    }
     // (RISK)(TIME)(CONTRIBUTE)
     static JPanel createPortfolio111Panel() {
         JPanel panel = new JPanel();

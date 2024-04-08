@@ -20,7 +20,6 @@ public class Auth {
     public static boolean uploadProfile(String username, int income, int risk, boolean contributeMonthly, int timePeriod, int monthlyAmount) {
         String strUrl;
         try {
-            // Convert the parameters to strings and URL encode them
             String encodedUsername = URLEncoder.encode(username, "UTF-8");
             String encodedIncome = URLEncoder.encode(String.valueOf(income), "UTF-8");
             String encodedRisk = URLEncoder.encode(String.valueOf(risk), "UTF-8");

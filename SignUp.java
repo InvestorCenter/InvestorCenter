@@ -71,9 +71,6 @@ public class SignUp extends JFrame implements ActionListener {
             e.printStackTrace();
         }
 
-        
-
-
         //username and password indicators
         usernameLabel = new JLabel("Username:");
         usernameLabel.setBounds(125, 90, 80, 30);
@@ -82,23 +79,15 @@ public class SignUp extends JFrame implements ActionListener {
         passwordLabel = new JLabel("Password:");
         passwordLabel.setBounds(125, 130, 80, 30);
 
-
-
-
         //username text field
         usernameField = new JTextField();
         usernameField.setBounds(200,90, 200, 30);
         usernameField.setBorder(BorderFactory.createLineBorder(Color.black));
 
-
-
         //password text field
         passwordField = new JPasswordField();
         passwordField.setBounds(200, 130, 200, 30);
         passwordField.setBorder(BorderFactory.createLineBorder(Color.black));
-
-
-
 
         //sign up button
         signUpButton = new JButton("Sign up");
@@ -114,7 +103,6 @@ public class SignUp extends JFrame implements ActionListener {
         add(signUpButton);
 
         pack();
-
         setVisible(true);
     }
 

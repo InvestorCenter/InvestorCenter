@@ -3,12 +3,6 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;
 import java.awt.geom.QuadCurve2D;
-// TODO: MAKE GRAPH ONE CURVE/LINE TO SHOW INTEREST EARNED. WILL BE EASIER TO LOOK AT
-//TODO: MAKE SURE WE ADD THE MONTHLY CONTRIBUTIONS (CAN DO THIS BY MULTIPLYING THE CONTRIBUTION AMOUNT BY 12 THEN ADDING TO PRINCIPLE AND MULTIPLYING BY INTEREST RATE) DO THIS FOR EVERY YEAR
-// FIXME: GRAPH DATA STARTS AT 1 YEAR BUT IT SHOULD START AT 0 YEARS.
-// FIXME: GRAPH CREATES MULTIPLE FRAMES (OVERLAPS LIKE 10 OF THEM)
-// TODO: SHOULD WE ADD FIELDS TO MODIFY THE GRAPH ONCE ITS ALREADY MADE
-// FIXME: CAN NO LONGER SEE THE LINE ON THE GRAPH
 public class Graph extends JPanel implements MouseMotionListener {
     private static final int OFFSETX = 100;
     private static final int OFFSETY = 150;
@@ -160,6 +154,10 @@ public class Graph extends JPanel implements MouseMotionListener {
         this.data = data;
         this.interest = interest;
         addMouseMotionListener(this);
+        JLabel label = new JLabel("Principal: #  Interest earned: # ");
+        JPanel labelPanel = new JPanel();
+        labelPanel.setLayout(new BoxLayout(labelPanel, BoxLayout.X_AXIS));
+
         yValueLabel = new JLabel();
         yValueLabel.setPreferredSize(new Dimension(100, 20));
         // Set JPanel layout to BorderLayout to position the label
@@ -170,7 +168,9 @@ public class Graph extends JPanel implements MouseMotionListener {
         for (double interestValue : this.interest){totalInterest+=interestValue;}
         Double.toString(totalInterest);
         key.setText("<html>" + "After " + data.length + " years, you would of made $" + String.format("%.2f", totalInterest) + " after investing $" +  totalInvestment +"<br><br>" + "GREEN LINE IS INVESTMENT\n BLUE LINE IS INTEREST MADE ON DOLLAR SO FAR" + "<html>");
-        add(yValueLabel, BorderLayout.NORTH);
+        labelPanel.add(label);
+        labelPanel.add(yValueLabel);
+        add(labelPanel, BorderLayout.NORTH);
         add(key, BorderLayout.SOUTH);
     }
 

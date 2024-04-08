@@ -32,17 +32,12 @@ public class Survey extends JFrame implements ActionListener {
         setSize(new Dimension(600, 400));
         setLocationRelativeTo(null);
 
-
-        // Function to set visibility of JFrame.
         setVisible(true);
 
-        // Function to set default operation of JFrame.
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        // to get the content
         c = getContentPane();
 
-        // Initialization of object "card"
         card = new CardLayout();
 
         // set the layout
@@ -58,7 +53,6 @@ public class Survey extends JFrame implements ActionListener {
         initialContribution.requestFocus();
         initialContribution.initialContributionField.setEditable(true);
         initialContribution.next.addActionListener(this);
-
 
         riskPanel = new RiskPanel();
         riskPanel.nextButton.addActionListener(this);
@@ -77,10 +71,8 @@ public class Survey extends JFrame implements ActionListener {
 
         c.add(intro, "welcome");
 
-        // Adding the incomePanel
         c.add(initialContribution, "income");
 
-        // Adding the riskPanel
         c.add(riskPanel, "risk");
 
         c.add(yesNoContributions, "contributions");
@@ -98,13 +90,10 @@ public class Survey extends JFrame implements ActionListener {
             // show welcome back panel if profile is valid
             card.show(c, "welcomeBack");
 
-            //int portfolio = DeterminePortfolio(profile);
         } else {
-            // show intro panel if profile is not valid
             card.show(c, "welcome");
         }
     }
-
 
 
     public void actionPerformed(ActionEvent e) {
@@ -363,7 +352,6 @@ public class Survey extends JFrame implements ActionListener {
 
         }
 
-
     }
 
 
@@ -468,12 +456,4 @@ public class Survey extends JFrame implements ActionListener {
         return 0;
     }
 
-
 }
-
-
-
-
-
-
-
