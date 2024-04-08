@@ -50,7 +50,7 @@ public class Portfolios {
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
 
-            createGraph();
+            createGraph(10);
 
         }
         if (option == 1){
@@ -64,7 +64,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraph();
+            createGraph(10);
 
         }
 
@@ -91,7 +91,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraph();
+            createGraph(10);
         }
         if (option == 1){
 
@@ -106,7 +106,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraph();
+            createGraph(10);
 
 
         }
@@ -133,7 +133,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraph();
+            createGraph(10);
 
             
 
@@ -151,7 +151,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraph();
+            createGraph(10);
         }
 
         return panel;
@@ -176,7 +176,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraph();
+            createGraph(10);
 
             
 
@@ -195,7 +195,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraph();
+            createGraph(10);
 
         }
         return panel;
@@ -220,7 +220,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraph();
+            createGraph(10);
 
         }
         if (option == 1){
@@ -236,7 +236,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraph();
+            createGraph(10);
         }
 
         return panel;
@@ -261,7 +261,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraph();
+            createGraph(10);
         }
         if (option == 1) {
 
@@ -276,7 +276,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraph();
+            createGraph(10);
 
             
 
@@ -307,7 +307,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraph();
+            createGraph(10);
         }
         if (option == 1) {
 
@@ -322,7 +322,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraph();
+            createGraph(10);
         }
 
         return panel;
@@ -347,7 +347,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraph();
+            createGraph(10);
         }
         if (option == 1) {
 
@@ -362,7 +362,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraph();
+            createGraph(10);
         }
 
         return panel;
@@ -387,7 +387,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraph();
+            createGraph(10);
 
         }
         if (option == 1) {
@@ -403,7 +403,7 @@ public class Portfolios {
             descriptionLabel.setText("<html>"+ description +"</html>");
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraph();
+            createGraph(10);
 
         }
 
@@ -429,7 +429,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraph();
+            createGraph(10);
         }
         if (option == 1) {
 
@@ -444,7 +444,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraph();
+            createGraph(10);
         }
 
         return panel;
@@ -469,7 +469,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraph();
+            createGraph(10);
         }
         if (option == 1) {
 
@@ -484,7 +484,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraph();
+            createGraph(10);
         }
 
         return panel;
@@ -509,7 +509,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraph();
+            createGraph(10);
         }
         if (option == 1) {
 
@@ -524,7 +524,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraph();
+            createGraph(10);
         }
 
         return panel;
@@ -553,7 +553,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraph();
+            createGraph(10);
 
 
         }
@@ -570,7 +570,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraph();
+            createGraph(10);
 
         }
 
@@ -596,7 +596,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraph();
+            createGraph(10);
         }
         if (option == 1) {
 
@@ -611,7 +611,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraph();
+            createGraph(10);
         }
 
         return panel;
@@ -636,7 +636,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraph();
+            createGraph(10);
 
            
 
@@ -654,7 +654,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraph();
+            createGraph(10);
 
 
         }
@@ -682,7 +682,7 @@ public class Portfolios {
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
 
-            createGraph();
+            createGraph(10);
         }
         if (option == 1) {
 
@@ -698,7 +698,7 @@ public class Portfolios {
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
 
-            createGraph();
+            createGraph(10);
         }
 
         return panel;
@@ -723,7 +723,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraph();
+            createGraph(10);
 
            
 
@@ -741,7 +741,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraph();
+            createGraph(10);
 
         }
 
@@ -767,7 +767,7 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
-            createGraph();
+            createGraph(10);
 
            
 
@@ -785,6 +785,8 @@ public class Portfolios {
             descriptionLabel.setFont(new Font("Arial", Font.PLAIN, 14));
             descriptionLabel.setHorizontalAlignment(SwingConstants.CENTER);
             panel.add(descriptionLabel, BorderLayout.CENTER);
+
+            createGraph(10);
 
 
         }
@@ -804,23 +806,35 @@ public class Portfolios {
         titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
         titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
         panel.add(titleLabel, BorderLayout.NORTH);
-        createGraph();
-
-
         return panel;
     }
 
-    private static void createGraph(){
+    private static void createGraph(float interestRate){
+        int contribution = Auth.getUserMonthlyAmount(User.getName());
+        int initalInvestment = Auth.getUserIncome(User.getName());
+        int length = getTimePeriod();
+
        
-        System.out.println(Auth.getUserMonthlyAmount(User.getName()));
         JFrame frame = new JFrame("Graph");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        Interest gInterest = new Interest(0,1000, 10, 10); // 5 grand for 10 years at 6% interest
+        Interest gInterest = new Interest(initalInvestment,contribution, length, interestRate); // 5 grand for 10 years at 6% interest
         double[] data = gInterest.getDataSet();
         double[] interest = gInterest.calculateInterest();
         Graph graph = new Graph(data,interest);
         frame.add(graph);
         frame.setSize(500, 500);
         frame.setVisible(true);
+    }
+
+
+    private static int getTimePeriod() {
+        int timeNumber = Auth.getUserTimePeriod(User.getName());
+        if (timeNumber == 1) {
+            return 2;
+        } else if (timeNumber == 2) {
+            return 5;
+        } else {
+            return 10;
+        }
     }
 }

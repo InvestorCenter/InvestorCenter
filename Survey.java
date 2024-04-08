@@ -269,75 +269,93 @@ public class Survey extends JFrame implements ActionListener {
                     portfolioCard = Portfolios.createPortfolio111Panel();
                     c.add(portfolioCard, "portfolio");
                     card.show(c, "portfolio");
+                    break;
 
                 case 110:
                     portfolioCard = Portfolios.createPortfolio110Panel();
                     c.add(portfolioCard, "portfolio");
                     card.show(c, "portfolio");
+                    break;
                 case 121:
                     portfolioCard = Portfolios.createPortfolio121Panel();
                     c.add(portfolioCard, "portfolio");
                     card.show(c, "portfolio");
+                    break;
                 case 120:
                     portfolioCard = Portfolios.createPortfolio120Panel();
                     c.add(portfolioCard, "portfolio");
                     card.show(c, "portfolio");
+                    break;
                 case 131:
                     portfolioCard = Portfolios.createPortfolio131Panel();
                     c.add(portfolioCard, "portfolio");
                     card.show(c, "portfolio");
+                    break;
                 case 130:
                     portfolioCard = Portfolios.createPortfolio130Panel();
                     c.add(portfolioCard, "portfolio");
                     card.show(c, "portfolio");
+                    break;
                 case 211:
                     portfolioCard = Portfolios.createPortfolio211Panel();
                     c.add(portfolioCard, "portfolio");
                     card.show(c, "portfolio");
+                    break;
                 case 210:
                     portfolioCard = Portfolios.createPortfolio210Panel();
                     c.add(portfolioCard, "portfolio");
                     card.show(c, "portfolio");
+                    break;
                 case 221:
                     portfolioCard = Portfolios.createPortfolio221Panel();
                     c.add(portfolioCard, "portfolio");
                     card.show(c, "portfolio");
+                    break;
                 case 220:
                     portfolioCard = Portfolios.createPortfolio220Panel();
                     c.add(portfolioCard, "portfolio");
                     card.show(c, "portfolio");
+                    break;
                 case 231:
                     portfolioCard = Portfolios.createPortfolio231Panel();
                     c.add(portfolioCard, "portfolio");
                     card.show(c, "portfolio");
+                    break;
                 case 230:
                     portfolioCard = Portfolios.createPortfolio230Panel();
                     c.add(portfolioCard, "portfolio");
                     card.show(c, "portfolio");
+                    break;
                 case 311:
                     portfolioCard = Portfolios.createPortfolio311Panel();
                     c.add(portfolioCard, "portfolio");
                     card.show(c, "portfolio");
+                    break;
                 case 310:
                     portfolioCard = Portfolios.createPortfolio310Panel();
                     c.add(portfolioCard, "portfolio");
                     card.show(c, "portfolio");
+                    break;
                 case 321:
                     portfolioCard = Portfolios.createPortfolio321Panel();
                     c.add(portfolioCard, "portfolio");
                     card.show(c, "portfolio");
+                    break;
                 case 320:
                     portfolioCard = Portfolios.createPortfolio320Panel();
                     c.add(portfolioCard, "portfolio");
                     card.show(c, "portfolio");
+                    break;
                 case 331:
                     portfolioCard = Portfolios.createPortfolio331Panel();
                     c.add(portfolioCard, "portfolio");
                     card.show(c, "portfolio");
+                    break;
                 case 330:
                     portfolioCard = Portfolios.createPortfolio330Panel();
                     c.add(portfolioCard, "portfolio");
                     card.show(c, "portfolio");
+                    break;
                 default:
                     Portfolios.createDefaultPortfolioPanel();
 
