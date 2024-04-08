@@ -27,7 +27,7 @@ public class Interest {
         dataCopy = new double[length];
         dataCopy[0] = initialAmount;
         for (int i = 1; i < length; i++){
-            dataSet[i] = dataSet[i-1] + contribution;
+            dataSet[i] = dataSet[i-1] + (contribution*12);
             dataCopy[i] = dataSet[i];
         }
     }
@@ -37,27 +37,33 @@ public class Interest {
        return dataSet;
     }
 
-    public double[] calculateInterest() {
+    public double[] calculateInterest(){
         double[] set = new double[interestSet.length];
+        for (int i = 0; i < dataCopy.length; i++){
+            if (i>0 && i < dataCopy.length - 1){
 
-        for (int i = 0; i < dataCopy.length; i++) {
-            // calculate interest for the current amount
-            double currentInterest = (dataCopy[i] * (interestRate / 100));
-            // store it separately
-            set[i] = currentInterest;
-            // if it's not the last data point
-            if (i < dataCopy.length - 1) {
-                // aggregate the interest
-                interestSet[i] = (i > 0 ? interestSet[i - 1] : 0) + currentInterest;
-                // update the next principal amount
-                dataCopy[i + 1] += interestSet[i];
-            } else {
-                // for the last data point
-                interestSet[i] = (i > 0 ? interestSet[i - 1] : 0) + currentInterest;
-                dataCopy[i] += currentInterest;
+                
+                double currentInterest = (dataCopy[i] * (interestRate/100));
+               // get previous data
+               double prevInterest = interestSet[i-1];
+               interestSet[i] = currentInterest + prevInterest;
+               dataCopy[i+1] += currentInterest + prevInterest;;
+               set[i] = currentInterest;
+
+            }
+            else if (i == dataCopy.length-1){
+                double currentInterest = (dataCopy[i] * (interestRate/100));
+               // get previous data
+               interestSet[i] = currentInterest;
+               dataCopy[i] += currentInterest;
+
+               set[i] = currentInterest;
+            }
+            else{
+                interestSet[0] = 0;
             }
         }
-
+        
         return set;
     }
 }

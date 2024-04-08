@@ -112,7 +112,7 @@ public class Graph extends JPanel implements MouseMotionListener {
                 int index1 = (int) ((mouseX - OFFSETX) / xScale);
                 int index2 = index1 + 1;
 
-                if (index1 >= 0 ) {
+                if (index1 >= 0 && index1 < data.length ) {
                     double y1 = data[index1];
                     double interestY1 = interest[index1];
                     double interestY2;
@@ -161,11 +161,17 @@ public class Graph extends JPanel implements MouseMotionListener {
         addMouseMotionListener(this);
         yValueLabel = new JLabel();
         yValueLabel.setPreferredSize(new Dimension(100, 20));
-        add(yValueLabel);
-
         // Set JPanel layout to BorderLayout to position the label
         setLayout(new BorderLayout());
+        JLabel information = new JLabel();
+        JLabel key = new JLabel();
+        double totalInterest = 0;
+        double totalInvestment = data[data.length-1];
+        for (double interestValue : this.interest){totalInterest+=interestValue;}
+        Double.toString(totalInterest);
+        key.setText("<html>" + "After " + data.length + " years, you would of made $" + String.format("%.2f", totalInterest) + " after investing $" +  totalInvestment +"<br><br>" + "GREEN LINE IS INVESTMENT\n BLUE LINE IS INTEREST MADE ON DOLLAR SO FAR" + "<html>");
         add(yValueLabel, BorderLayout.NORTH);
+        add(key, BorderLayout.SOUTH);
     }
 
     @Override
