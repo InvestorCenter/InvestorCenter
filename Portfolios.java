@@ -492,7 +492,7 @@ public class Portfolios {
 
             panel.add(descriptionLabel, BorderLayout.CENTER);
 
-            createGraph(40);
+            createGraph(20);
 
 
 

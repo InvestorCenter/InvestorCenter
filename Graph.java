@@ -36,6 +36,7 @@ public class Graph extends JPanel implements MouseMotionListener {
 
         // Draw x-axis
         g2d.drawLine(OFFSETX, getHeight() - OFFSETY, getWidth() - OFFSETX, getHeight() - OFFSETY);
+        g2d.drawString("TIME (YEARS)", getWidth() / 2 - 30, getHeight() - 100);
 
         // Draw y-axis
         g2d.drawLine(OFFSETX, getHeight() - OFFSETY, OFFSETX, OFFSETY);
@@ -163,7 +164,6 @@ public class Graph extends JPanel implements MouseMotionListener {
         yValueLabel.setPreferredSize(new Dimension(100, 20));
         // Set JPanel layout to BorderLayout to position the label
         setLayout(new BorderLayout());
-        JLabel information = new JLabel();
         JLabel key = new JLabel();
         double totalInterest = 0;
         double totalInvestment = data[data.length-1];
