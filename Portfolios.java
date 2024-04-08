@@ -827,7 +827,7 @@ public class Portfolios {
         }
 
 
-        }
+
         if (option == 1) {
 
             JLabel titleLabel = new JLabel("Bank of Hawaii Corp (BOH)   ");
@@ -933,7 +933,7 @@ public class Portfolios {
         }
 
 
-        }
+
         if (option == 1) {
 
             JLabel titleLabel = new JLabel("Tesla (TSLA)  ");
@@ -988,7 +988,7 @@ public class Portfolios {
         }
 
 
-        }
+
         if (option == 1) {
 
             JLabel titleLabel = new JLabel("SBI Gold Direct Plan Growth ");
